@@ -1,0 +1,5 @@
+com/vendingmachine/daos/InMemoryDao.class
+com/vendingmachine/daos/FileDaoTest.class
+com/vendingmachine/services/VendingServiceTest.class
+com/vendingmachine/daos/AuditDaoStub.class
+com/vendingmachine/daos/AlwaysFailDao.class

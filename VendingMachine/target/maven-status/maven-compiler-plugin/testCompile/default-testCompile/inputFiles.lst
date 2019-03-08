@@ -1,0 +1,5 @@
+/home/designbyadam/Repos/adam-fahrenkamp-individual-work/VendingMachineRoundThreeWithSpring/src/test/java/com/vendingmachine/daos/AlwaysFailDao.java
+/home/designbyadam/Repos/adam-fahrenkamp-individual-work/VendingMachineRoundThreeWithSpring/src/test/java/com/vendingmachine/services/VendingServiceTest.java
+/home/designbyadam/Repos/adam-fahrenkamp-individual-work/VendingMachineRoundThreeWithSpring/src/test/java/com/vendingmachine/daos/AuditDaoStub.java
+/home/designbyadam/Repos/adam-fahrenkamp-individual-work/VendingMachineRoundThreeWithSpring/src/test/java/com/vendingmachine/daos/FileDaoTest.java
+/home/designbyadam/Repos/adam-fahrenkamp-individual-work/VendingMachineRoundThreeWithSpring/src/test/java/com/vendingmachine/daos/InMemoryDao.java
