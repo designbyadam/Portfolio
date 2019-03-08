@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .btn-sq-lg {
+            width: 25%;
+            height: 150px;
+            margin-right: 24px;
+            margin-bottom: 24px;
+        }
+    </style>
+    <title>Vending Machine</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Vending Machine</h1>
+        <hr>
+        <div id="itemsColumn" class="col-md-9">
+
+            <button class="btn-sq-lg btn-default">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </button>
+            <button class="btn-sq-lg btn-default">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </button>
+            <button class="btn-sq-lg btn-default">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </button>
+            <button class="btn-sq-lg btn-default">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </button>
+            <button class="btn-sq-lg btn-default">
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+            </button>
+
+
+
+
+
+        </div>
+        <div class="col-md-3">
+            <div class="row">
+                <p class="text-center" style="font-size: 36px">Total $ In</p>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" id="totalMoney" type="text" readonly>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <button type="button" id="buttonDollar" class="btn btn-default">Add Dollar</button>
+                    <button type="button" id="buttonQuarter" class="btn btn-default">Add Quarter</button>
+                </div>
+                <div class="text-center">
+                    <button type="button" id="buttonDime" class="btn btn-default">Add Dime</button>
+                    <button type="button" id="buttonNickel" class="btn btn-default">Add Nickel</button>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <p class="text-center" style="font-size: 36px">Messages</p>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" id="totalMoney" type="text" readonly>
+                    </div>
+                </form>
+                <form class="form-inline text-right">
+                    <div class="form-group">
+                        <label for="itemBox">Item:</label>
+                        <input class="form-control" id="itemBox" type="text" readonly> Item Name
+                    </div>
+                </form>
+                <div class="text-center">
+                    <br>
+                    <button type="button" id="buttonPurchase" class="btn btn-default">Make Purchase</button>
+                </div>
+                <hr>
+            </div>
+
+            <div class="row">
+                <p class="text-center" style="font-size: 36px">Change</p>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" id="totalChange" type="text" readonly>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <br>
+                    <button type="button" id="buttonChangeReturn" class="btn btn-default">Change Return</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
