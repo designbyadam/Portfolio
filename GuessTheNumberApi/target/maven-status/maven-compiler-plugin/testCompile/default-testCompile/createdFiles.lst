@@ -1,0 +1,4 @@
+com/sg/guessthenumberapi/data/GuessInMemoryDao.class
+com/sg/guessthenumberapi/data/GuessTheNumberDbDaoTest.class
+com/sg/guessthenumberapi/data/GuessDaoAlwaysFail.class
+com/sg/guessthenumberapi/services/GuessTheNumberServiceTest.class
