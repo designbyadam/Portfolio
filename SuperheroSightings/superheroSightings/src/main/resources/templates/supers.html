@@ -1,0 +1,106 @@
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Supers</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row m-8">
+                <div class="col text-center border border-dark" style="margin-top: 36px">
+                    <h1 class="text-dark">Supers</h1>
+                </div>
+            </div>
+            <div class="row m-8 border border-dark" style="margin-top: 36px">
+                <div class="col text-center m-2">
+                    <a href="/" class="btn btn-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
+                    <a href="supers" class="btn btn-primary btn-lg">Supers</a>
+                </div>
+                <div class="col text-center m-2">
+                    <a href="sightings" class="btn btn-primary btn-lg">Sightings</a>
+                </div>
+                <div class="col text-center m-2">
+                    <a href="organizations" class="btn btn-primary btn-lg">Organizations</a>
+                </div>
+                <div class="col text-center m-2">
+                    <a href="locations" class="btn btn-primary btn-lg">Locations</a>
+                </div>
+            </div>
+            <div class="row m-6 border border-dark" style="margin-top: 36px">
+                <div class="col text-center m-3">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Super Name</th>
+                                <th>Description</th>
+                                <th>Superpower</th>
+                                <th>Details</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="sup,iterationStatus : ${vm.allSupers}">
+                                <td th:text="${sup.superId}"></td>
+                                <td th:text="${sup.name}"></td>
+                                <td th:text="${sup.description}"></td>
+                                <td th:text="${sup.superpower}"></td>
+                                <td><a href="#" th:href="@{/superDetail(superId=${sup.superId})}">Details</a></td>
+                                <td><a href="#" th:href="@{/editSuper(superId=${sup.superId})}">Edit</a></td>
+                                <td><a href="#" th:href="@{/deleteSuper(superId=${sup.superId})}">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row m-4 border border-dark">
+                <div class="col-12 m-1 text-center" 
+                     th:if="${errors!=null && !errors.isEmpty()}">
+                    <p class="alert alert-danger" th:each="error : ${errors}" 
+                       th:text="${error.message}">Error message</p>
+                </div>
+                <div class="col-3 text-center m-3">
+                    <span class="h3">Add Super</span>
+                </div>
+                <div class="col-7 text-center m-3">
+                    <form action="addSuper" method="POST" th:object="${toAdd}">
+                        <div class="form-group row">
+                            <label for="name" class="col-3 col-form-label">
+                                Super Name</label>
+                            <div class="col-9">
+                                <input type="text" name="name" th:value="${name}"
+                                       id="name" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="superDescription" class="col-3 col-form-label">
+                                Description</label>
+                            <div class="col-9">
+                                <input type="text" name="description" th:value="${description}"
+                                       id="description" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="superpower" class="col-3 col-form-label">
+                                Super Power</label>
+                            <div class="col-9">
+                                <input type="text" name="superpower" th:value="${superpower}"
+                                       id="superpower" class="form-control"/>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Super</button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
